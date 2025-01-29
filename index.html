@@ -1,730 +1,770 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hii Varun - AI-Powered Logistics Revolution</title>
+    <style>
+        :root {
+            --primary-blue: #2563EB;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --bg-light: #f9fafb;
+        }
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        body {
+            background: white;
+            color: #5f6368;
+            line-height: 1.6;
+        }
 
-        <title>Responsive Portfolio Website</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#" class="nav__logo">Varun</a>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; /* Updated margin */
+            padding: 2rem; /* Updated padding */
+        }
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link ">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About    
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i>Skills   
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i>Services
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i>Portfolio   
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i>Contactme
-                        </a>
-                    </li>
+        .header {
+            padding: 1rem 2rem; /* Updated padding */
+            border-bottom: 1px solid #eee; /* Updated border color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-name {
+            color: #5f6368;
+            font-size: 18px;
+        }
+
+        .investors-link {
+            color: #5f6368;
+            text-decoration: none;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 4rem 0; /* Updated margin */
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: var(--primary-blue); /* Updated background color */
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .brand h2 span {
+            color: var(--primary-blue);
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 1.25rem;
+        }
+
+        .hero-text {
+            max-width: 800px;
+        }
+
+        .title {
+            font-size: 3.5rem; /* Updated font size */
+            color: var(--text-dark);
+            margin-bottom: 1rem; /* Updated margin */
+            font-weight: normal;
+        }
+
+        .subtitle {
+            font-size: 1.5rem; /* Updated font size */
+            color: var(--text-gray);
+            margin-bottom: 2rem; /* Updated margin */
+        }
+
+        .title {
+            margin: 30px 0;
+            font-size: 52px;
+            color: #202124;
+            font-weight: normal;
+        }
+
+        .mission {
+            max-width: 800px;
+            font-size: 20px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .comparison-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background: var(--bg-light);
+            transition: transform 0.3s ease;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .comparison-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .features-list {
+            margin: 4rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-number {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .advantage-card {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--bg-light);
+        }
+
+        .advantage-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .advantage-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background: var(--bg-light);
+            transition: all 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 4rem 2rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #5f6368;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: #dbeafe; /* Updated background color */
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem; /* Updated padding */
+            border-radius: 9999px; /* Updated border-radius */
+            font-weight: 500; /* Updated font-weight */
+            margin-bottom: 1rem; /* Updated margin */
+        }
+
+        .email {
+            font-size: 1.25rem; /* Updated font size */
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .signature {
+            margin-top: 2rem; /* Updated margin */
+            font-style: italic; /* Updated font-style */
+        }
+
+        .name-title {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .floating-blocks {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 400px;
+            height: 400px;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            border-left: 2px solid var(--primary-blue);
+            position: relative;
+            margin-left: 20px;
+            background: #f8f9fa;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            width: 14px;
+            height: 14px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .interactive-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .interactive-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .interactive-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(37, 99, 235, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .interactive-card:hover::after {
+            opacity: 1;
+        }
+
+        .floating-letters {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .letter {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(37, 99, 235, 0.1);
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px;
+            }
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .mission {
+                font-size: 1.25rem;
+                text-align: center;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .main-content {
+                padding: 0 20px;
+                margin: 40px auto;
+            }
+            .title {
+                font-size: 36px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-blocks {
+                display: none;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interactive-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Add new styles for business card */
+            .business-card {
+                margin: 4rem auto;
+                max-width: 400px;
+                background: white;
+                border-radius: 16px;
+                padding: 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .card-logo {
+                width: 48px;
+                height: 48px;
+                background: var(--primary-blue);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .card-title h3 {
+                font-size: 1.25rem;
+                color: var(--text-dark);
+                margin-bottom: 0.25rem;
+            }
+
+            .card-title span {
+                color: var(--primary-blue);
+                font-size: 1rem;
+            }
+
+            .card-details {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .card-contact {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: var(--text-gray);
+            }
+
+            .transport-icons {
+                display: flex;
+                gap: 1rem;
+                color: var(--text-gray);
+                opacity: 0.5;
+            }
+
+            .footer {
+                text-align: center;
+                padding: 2rem;
+                color: var(--text-gray);
+                border-top: 1px solid #eee;
+            }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>Hii Varun</div>
+        <a href="#" style="text-decoration: none; color: inherit;">Investors</a>
+    </header>
+
+    <div class="container">
+        <section class="logo-section">
+            <div class="logo">H</div>
+            <div class="hero-text">
+                <h1 class="title">Welcome to HiiVarun</h1>
+                <p class="subtitle">Transforming logistics and freight operations through the power of AI.</p>
+            </div>
+        </section>
+
+        <section class="comparison-grid">
+            <div class="comparison-card">
+                <h3>Traditional Method</h3>
+                <ul style="list-style: none;">
+                    <li>✗ Manual searches for forwarders and pricing</li>
+                    <li>✗ Inefficient communication across platforms</li>
+                    <li>✗ Limited real-time data</li>
+                    <li>✗ Slow decision-making processes</li>
                 </ul>
-                <i class="uil uil-times" id="nav-close"></i>
             </div>
-            <div class="nav__btns">
-                <!--Theam changing button-->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
+            <div class="comparison-card">
+                <h3>AI-Powered HiiVarun</h3>
+                <ul style="list-style: none;">
+                    <li>✓ Instant global forwarder mapping</li>
+                    <li>✓ Unified communication platform</li>
+                    <li>✓ Real-time data and insights</li>
+                    <li>✓ AI-driven decision making</li>
+                </ul>
             </div>
-         </nav>   
-        </header>
+        </section>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/hii-varun" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin"></i>
-                            </a>
-                            
-                            <a href="mailto:dubeyvarun949@gmail.com" target="_blank" class="home__social-icon">
-                                <i class="uil uil-envelope"></i>
-                            </a> 
-                            
-                            <a href="https://github.com/itzvarun02" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                    <image class="home__blob-img" x='18' y='-15' href="assets/img/dp1.png"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hii, I'am Varun</h1>
-                            <h3 class="home__subtitle">Frontend developer</h3>
-                            <p class="home__discription">Experienced Web Developer with passion for creating attractive and interactive websites meeting customer needs and exceeding 
-                                expectations.<br></br> </p>
-                                <a href="#contact" class="button button--flex">
-                                    Contact Me <i class="uil uil-message button__icon"></i>
-                                </a>
-                        </div>
-                    </div>
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex"></a>
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="assets/img/about.jpg" alt="" class="about__img">
-
-                    <div class="about__data">
-                        <p class="about__description">Web developer with years of expertise and broad knowledge in 
-                            web technologies, specializing in Ui/Ux design and producing high-quality work.</p>
-
-                            <div class="about__info">
-                                <div>
-                                    <span class="about__info-title">01+</span>
-                                    <span class="about__info-name">Years <br> experience</span>
-                                </div>
-
-                                <div>
-                                    <span class="about__info-title">04+</span>
-                                    <span class="about__info-name">Completed <br> project</span>
-                                </div>
-
-                                <div>
-                                    <span class="about__info-title">8.33</span>
-                                    <span class="about__info-name">Overall <br> CGPA</span>
-                                </div>
-                            </div>
-
-                            <div class="about__buttons">
-                                <a download="" href="assets/pdf/Varun-Cv.pdf" class="button button--flex">
-                                    Download CV<i class="uil uil-download-alt button__icon"></i>
-                                </a>
-                            </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My technical level</span>
-
-                <div class="skills__container container grid">
-                    <div>
-                        <!--==================== SKILLS 1====================-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
-                                <i class="uil uil-brackets-curly skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Frontend developer</h1>
-                                    <span class="skills__subtitle">More than 1.2 years</span>
-                                </div>
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__css"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">JavaScript</h3>
-                                        <span class="skills__number">60%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__js"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">React</h3>
-                                        <span class="skills__number">50%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__react"></span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <!--==================== SKILLS 2====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-server-network skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Backend developer</h1>
-                                    <span class="skills__subtitle">More than 0.3 years</span>
-                                </div>
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">PHP</h3>
-                                        <span class="skills__number">10%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__php"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Node Js</h3>
-                                        <span class="skills__number">10%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__node"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Firebase</h3>
-                                        <span class="skills__number">20%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__firebase"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__number">55%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__python"></span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <!--==================== SKILLS 3====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-swatchbook skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Designer</h1>
-                                    <span class="skills__subtitle">More than 1+ years</span>
-                                </div>
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Figma</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__figma"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Sketch</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__sketch"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Photoshop</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__photoshop"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My personal journey</span>
-              
-                <div class="qualification__container container">
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex">
-                            <i class="uil uil-graduation-cap qualification__icon qualification__active" data-target="#eductaion"></i>
-                            Education
-                        </div> 
-                    <!--    <div class="qualification__button button--flex">
-                            <i class="uil uil-briefcase qualification__icon"></i>
-                            Work
-                        </div>-->
-                    </div>
-                    <div class="qualification__section">
-                         <!--==================== QUALIFICATION Content 1 ====================-->
-                         <div class="qualification__content qualification__active" data-content id="education">
-                            <!--==================== QUALIFICATION  3 ====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">B.tech  Artificial intelligence & Machine Learning </h3>
-                                    <span class="qualification__subtitle">Thakur college of engineering and technology,kandivali</span>
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 - 2024 (Present)
-                                </div>
-                            
-                                <div>
-                                 <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                             <!--==================== QUALIFICATION  2 ====================-->
-                             <div class="qualification__data">
-                                <div></div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                       <span class="qualification__line"></span>
-                                   </div>
-                                <div>
-                                    <h3 class="qualification__title">Class XII (Science) </h3>
-                                    <span class="qualification__subtitle">MNR School Of Excellence,Kamothe </span>
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2019 - 2020
-                                </div>
-                            </div>
-
-                             <!--==================== QUALIFICATION  1 ====================-->
-                             <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Class X </h3>
-                                    <span class="qualification__subtitle">DAV Public School,New Panvel</span>
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2017 - 2018
-                                </div>
-                            
-                                <div>
-                                 <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-              
-
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                <h2 class="section__title">Services</h2>
-                <span class="section__subtitle">What i offer</span>
-
-                <div class="services__container container grid">
-                     <!--==================== SERVICES 1 ====================-->
-                     <div class="services__content">
-                        <div>
-                            <i class="uil uil-robot services__icon"></i>
-                            <h3 class="services__title">AI&ML <br> Developer</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">AI&ML <br> Developer</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-services">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I develop the user interface.</p>
-                                    </li>
-                                    <li class="services__modal-services">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Web page development.</p>
-                                    </li>
-                                    <li class="services__modal-services">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I create ux element interactions.</p>
-                                    </li>
-                                    <li class="services__modal-services">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>I position your company brand</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                     </div>
-
-                          <!--==================== SERVICES 2 ====================-->
-                          <div class="services__content">
-                            <div>  
-                                <i class="uil uil-web-grid services__icon"></i>
-                                <h3 class="services__title">Ui/Ux <br> Designer</h3>
-                            </div>
-    
-                            <span class="button button--flex button--small button--link services__button">
-                                View More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </span>
-    
-                            <div class="services__modal">
-                                <div class="services__modal-content">
-                                    <h4 class="services__modal-title">Ui/Ux <br> Designer</h4>
-                                    <i class="uil uil-times services__modal-close"></i>
-    
-                                    <ul class="services__modal-services grid">
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I develop the user interface.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>Web page development.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I create ux element interactions.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I position your company brand</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                         </div>
-
-                          <!--==================== SERVICES 3 ====================-->
-                          <div class="services__content">
-                            <div>  
-                                <i class="uil uil-arrow services__icon"></i>
-                                <h3 class="services__title">Frontend <br> Developer</h3>
-                            </div>
-    
-                            <span class="button button--flex button--small button--link services__button">
-                                View More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </span>
-    
-                            <div class="services__modal">
-                                <div class="services__modal-content">
-                                    <h4 class="services__modal-title">Frontend <br> Developer</h4>
-                                    <i class="uil uil-times services__modal-close"></i>
-    
-                                    <ul class="services__modal-services grid">
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I develop the user interface.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>Web page development.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I create ux element interactions.</p>
-                                        </li>
-                                        <li class="services__modal-services">
-                                            <i class="uil uil-check-circle services__modal-icon"></i>
-                                            <p>I position your company brand</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                         </div>
-                </div>
-            </section>
-            <!--==================== PORTFOLIO ====================-->
-         
-            <section class="portfolio section" id="portfolio">
-    <h2 class="section__title">Portfolio</h2>
-    <span class="section__subtitle">Most recent work</span>
-
-    <div class="portfolio__container container swiper">
-        <div class="swiper-wrapper">
-            <!--==================== PORTFOLIO 1 ====================-->
-            <div class="swiper-slide">
-                <div class="portfolio__content grid">
-                    <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
-
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title"> Modern Website </h3>
-                        <p class="portfolio__description">Website adaptable to all devices,
-                            with UI components and animated interactions.</p>
-                        <a href="#" class="button button--flex button--small portfolio__button">
-                            Demo
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--==================== PORTFOLIO 2 ====================-->
-            <div class="swiper-slide">
-                <div class="portfolio__content grid">
-                    <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
-
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title"> Brand Design </h3>
-                        <p class="portfolio__description">Website adaptable to all devices,
-                            with UI components and animated interactions.</p>
-                        <a href="#" class="button button--flex button--small portfolio__button">
-                            Demo
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!--==================== PORTFOLIO 3 ====================-->
-            <div class="swiper-slide">
-                <div class="portfolio__content grid">
-                    <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
-
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title"> Online Store </h3>
-                        <p class="portfolio__description">Website adaptable to all devices,
-                            with UI components and animated interactions.</p>
-                        <a href="#" class="button button--flex button--small portfolio__button">
-                            Demo
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
-                <div class="swiper-pagination"></div>
-        </div>
-            </section>
-              
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-                <div class="project__bg">
-                    <div class="project__container container grid">
-                        <div class="project__data">
-                            <h2 class="project__title">Coming Soon</h2>
-                            <p class="project__description">Work in progress</p>
-                            <p class="project__description">Stay tuned for updates!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-            <!--==================== TESTIMONIAL ====================-->
-           <!-- <section class="testimonial section">
-                
-            </section>-->
-
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get in touch</span>
-            
-                <div class="contact__content contact grid">
-                    <div>
-                        <div class="contact__information">
-                            <i class="uil uil-calling contact__icon"></i>
-            
-                            <div>
-                                <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">+91 900-489-2147</span>
-                            </div>
-                        </div>
-            
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-            
-                            <div>
-                                <h3 class="contact__title">Email Me</h3>
-                                <span class="contact__subtitle">dubeyvarun949@gmail.com</span>
-                            </div>
-                        </div>
-            
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-            
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">Mumbai, Maharashtra, India</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <form action="#" class="contact__form grid">
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="name" class="contact__label">Name</label>
-                                <input type="text" id="name" class="contact__input" required>
-                            </div>
-            
-                            <div class="contact__content">
-                                <label for="email" class="contact__label">Email</label>
-                                <input type="email" id="email" class="contact__input" required>
-                            </div>
-                        </div>
-                        <div class="contact__content">
-                            <label for="project" class="contact__label">Project</label>
-                            <input type="text" id="project" class="contact__input">
-                        </div>
-                        <div class="contact__content">
-                            <label for="message" class="contact__label">Message</label>
-                            <textarea id="message" cols="30" rows="7" class="contact__input" required></textarea>
-                        </div>
-            
-                        <div>
-                            <button type="submit" class="button button--flex">
-                                Send Message
-                                <i class="uil uil-message button__icon"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         <div class="footer__bg">
-            <div class="footer__container container grid">
+        <section class="features-list">
+            <div class="feature-item">
+                <div class="feature-number">01</div>
                 <div>
-                    <h1 class="footer__title">Varun</h1>
-                    <span class="footer__subtitle">Frontend developer</span>
-                </div>
-            
-            <ul class="footer__links">
-                <li>
-                    <a href="#services" class="footer__link">Services</a>
-                </li>
-                <li>
-                    <a href="#portfolio" class="footer__link">Portfolio</a>
-                </li>
-                <li>
-                    <a href="contact" class="footer__link">Contactme</a>
-                </li>
-            </ul>
-
-            <div class="footer__socials">
-                <a href="https://www.snapchat.com/add/hii_varun?share_id=HWWnQ8cKV3Q&locale=en-US" target="_blank" class="footer__social">
-                    <i class="uil uil-snapchat-square"></i>
-                </a>
-
-                <a href="https://www.instagram.com/hii_varun/" target="_blank" class="footer__social">
-                    <i class="uil uil-instagram"></i>
-                </a>
-
-                <a href="https://twitter.com/dubeyji949" target="_blank" class="footer__social">
-                    <i class="uil uil-twitter"></i>
-                </a>
+                    <h3>Real-Time Mapping</h3>
+                    <p>Instantly locate all forwarder offices globally. View POL and POD distances with terms for clear understanding of costs and timelines.</p>
                 </div>
             </div>
-            <p class="footer__copy">&#169; Varun Vinay Dubey. All right reserved </p>
-         </div>
+            <div class="feature-item">
+                <div class="feature-number">02</div>
+                <div>
+                    <h3>Simplified Payment Options</h3>
+                    <p>Choose and manage payment terms seamlessly within the platform.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">03</div>
+                <div>
+                    <h3>Single Platform Communication</h3>
+                    <p>Eliminate endless email threads. Discuss all requirements, terms, and quotations in one unified platform.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">04</div>
+                <div>
+                    <h3>AI-Driven Forwarder Selection</h3>
+                    <p>Our AI analyzes and filters the best options based on price, reliability, and customer reviews.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="advantages-grid">
+            <div class="advantage-card">
+                <h3>Time-Saving AI Efficiency</h3>
+                <p>Streamlines processes and reduces manual efforts</p>
+            </div>
+            <div class="advantage-card">
+                <h3>Verified Customers & Reviews</h3>
+                <p>Builds trust with original, validated reviews</p>
+            </div>
+            <div class="advantage-card">
+                <h3>Subscription Benefits</h3>
+                <p>Fixed monthly fee with unlimited access - no commission or profit margins from forwarders</p>
+            </div>
+            <div class="advantage-card">
+                <h3>Direct Relationships</h3>
+                <p>Build direct relationships with forwarders without platform interference</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="coming-soon">Coming Soon</div>
+            <h2>Let's revolutionize the logistics industry together! 🚀</h2>
+            <p style="margin: 1rem 0;">For inquiries and collaboration:</p>
+            <a href="mailto:ceo@hiivarun.in" class="email">ceo@hiivarun.in</a>
+        </section>
+
+        <!-- Add Business Card Section -->
+        <section class="business-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-logo">H</div>
+                    <div class="card-title">
+                        <h3>Varun Vinay Dubey</h3>
+                        <span>CEO</span>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="card-contact">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <span>+91 8591 1864 57</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                            <span>ceo@hiivarun.in</span>
+                        </div>
+                    </div>
+                    <div class="transport-icons">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                            <path d="M3 17h18a2 2 0 002-2V9a2 2 0 00-2-2H3a2 2 0 00-2 2v6a2 2 0 002 2zm0 0v2a2 2 0 002 2h14a2 2 0 002-2v-2"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Hii Varun. All rights reserved.</p>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <div class="floating-blocks">
+            <!-- Add decorative letter blocks here -->
+        </div>
+    </div>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-        
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div class="floating-letters" id="floatingLetters"></div>
 
-    </body>
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add subtle parallax effect to floating blocks
+        document.addEventListener('mousemove', (e) => {
+            const blocks = document.querySelector('.floating-blocks');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            blocks.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+        });
+
+        // Add fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Apply animations to elements
+        document.querySelectorAll('.feature-item, .advantage-card, .comparison-card').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+
+        // Animate numbers in stat cards
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Intersection Observer for sections
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.id === 'stats') {
+                        document.querySelectorAll('.stat-number').forEach(stat => {
+                            animateValue(stat, 0, parseInt(stat.dataset.target), 2000);
+                        });
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Create floating letters
+        function createFloatingLetters() {
+            const letters = 'HIIVARUN';
+            const container = document.getElementById('floatingLetters');
+            
+            for (let i = 0; i < 20; i++) {
+                const letter = document.createElement('div');
+                letter.className = 'letter';
+                letter.textContent = letters[Math.floor(Math.random() * letters.length)];
+                letter.style.left = `${Math.random() * 100}%`;
+                letter.style.animationDelay = `${Math.random() * 20}s`;
+                container.appendChild(letter);
+            }
+        }
+
+        createFloatingLetters();
+
+        // Interactive cards hover effect
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
 </html>
